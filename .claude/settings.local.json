@@ -3,7 +3,12 @@
     "allow": [
       "Bash(python3:*)",
       "Bash(pip3 install:*)",
-      "Bash(test:*)"
+      "Bash(test:*)",
+      "Bash(uv run:*)",
+      "Bash(npm install:*)",
+      "Bash(npx tsc:*)",
+      "Bash(npm test:*)",
+      "Bash(node dist/cli.js \"https://app.clickup.com/t/69/BIG4-86\" clickup-export-test)"
     ],
     "deny": [],
     "ask": []
