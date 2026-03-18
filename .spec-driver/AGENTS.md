@@ -20,7 +20,7 @@ Usage notes:
 
 <skill>
 <name>audit-change</name>
-<description>Perform verification/audit pass after implementation (or as discovery/backfill), reconcile against specs/contracts, and route findings into closure or follow-up change.</description>
+<description>Canonical reconciliation runsheet for AUD artefacts. Create or update the audit, disposition every finding, reconcile specs/contracts, and hand off to closure only when audit state supports it.</description>
 <location>project</location>
 </skill>
 
@@ -62,13 +62,13 @@ Usage notes:
 
 <skill>
 <name>draft-design-revision</name>
-<description>Draft or refine a design revision (DR) for a delta, capturing current vs target behavior, code impacts, and verification alignment.</description>
+<description>Draft or refine a design revision (DR) for a delta. Use it when a DR needs concrete design shaping, explicit question triage, and section-by-section validation before implementation planning.</description>
 <location>project</location>
 </skill>
 
 <skill>
 <name>execute-phase</name>
-<description>Execute an active implementation phase against DR/IP intent, keep notes current, and surface blockers early.</description>
+<description>Mandatory execution skill for any delta/IP implementation phase. Use it before code changes, move the owning delta to in-progress, keep notes current, reconcile structured execution docs, and surface blockers early.</description>
 <location>project</location>
 </skill>
 
@@ -104,7 +104,7 @@ Usage notes:
 
 <skill>
 <name>preflight</name>
-<description>Before starting anything new, understand task, intent, and context.</description>
+<description>Use after routing has already happened, when the next step is bounded up-front research to understand a substantive task, surface unknowns and tensions, and assess readiness without drifting into implementation or open-ended exploration.</description>
 <location>project</location>
 </skill>
 
@@ -128,7 +128,7 @@ Usage notes:
 
 <skill>
 <name>shape-revision</name>
-<description>Shape a spec revision when requirements/responsibilities move. Use this before delta scoping when policy/doctrine requires revision-first flow.</description>
+<description>Shape a spec revision when requirements/responsibilities move. Use this before delta scoping when policy/doctrine requires revision-first flow, or when audit reconciliation shows authority must move.</description>
 <location>project</location>
 </skill>
 
