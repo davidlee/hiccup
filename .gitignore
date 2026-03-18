@@ -1,7 +1,6 @@
-clickup-export/
-*.pyc
-__pycache__/
-*.egg-info/
+node_modules
 dist/
-build/
-.pytest_cache/
+.envrc
+clickup-export/
+.spec-driver/run/
+.pi/APPEND_SYSTEM.md

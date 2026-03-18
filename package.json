@@ -1,0 +1,25 @@
+{
+  "name": "clickup-export",
+  "version": "1.0.0",
+  "description": "Export ClickUp task hierarchies to JSON",
+  "type": "module",
+  "bin": {
+    "clickup-export": "./dist/cli.js"
+  },
+  "scripts": {
+    "prepare": "tsc",
+    "build": "tsc",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "eslint src/",
+    "start": "node dist/cli.js"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.0",
+    "@typescript-eslint/eslint-plugin": "^8.0",
+    "@typescript-eslint/parser": "^8.0",
+    "eslint": "^9.0",
+    "typescript": "^5.4",
+    "vitest": "^3.0"
+  }
+}
