@@ -36,6 +36,10 @@ def fetch_tasks(list_id, api_token, params=None):
   headers = {"Authorization": api_token}
 
   response = requests.get(url, headers=headers, params=params or {})
+
+  if not response.ok:
+    print(f"API Error Response: {response.text}", file=sys.stderr)
+
   response.raise_for_status()
   return response.json()
 
@@ -46,6 +50,10 @@ def fetch_task_details(task_id, api_token):
   headers = {"Authorization": api_token}
 
   response = requests.get(url, headers=headers)
+
+  if not response.ok:
+    print(f"API Error Response: {response.text}", file=sys.stderr)
+
   response.raise_for_status()
   return response.json()
 
@@ -81,8 +89,22 @@ def export_clickup_data(url, api_token):
   """Main export function."""
   parsed = parse_clickup_url(url)
 
+  # If we have a specific task ID, start from that task
+  if parsed['task_id']:
+    print(f"Fetching task: {parsed['task_id']}", file=sys.stderr)
+    task = fetch_task_details(parsed['task_id'], api_token)
+
+    task_details_map = {}
+    tree_node = build_task_tree(task, api_token, task_details_map)
+
+    return {
+      'tree': [tree_node],
+      'details': task_details_map
+    }
+
+  # Otherwise fetch from list
   if not parsed['list_id']:
-    raise ValueError("Could not extract list ID from URL")
+    raise ValueError("Could not extract list ID or task ID from URL")
 
   print(f"Fetching tasks from list: {parsed['list_id']}", file=sys.stderr)
 
