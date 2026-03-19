@@ -12,8 +12,8 @@ npx github:davidlee/hiccup <input> [output-dir]
 `<input>` can be any of:
 
 - A ClickUp view URL — exports all lists in the space
-- A task detail URL (e.g. `https://app.clickup.com/t/69/BIG4-86`) — exports the task's list
-- A custom task ID (e.g. `BIG4-86`) — resolves and exports the task's list
+- A task detail URL (e.g. `https://app.clickup.com/t/69/STUFF-86`) — exports the task's list
+- A custom task ID (`STUFF-86`) — resolves and exports the task's list
 - A raw API list ID
 
 ## Output
